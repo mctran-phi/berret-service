@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:4357/relprod')
+    fetch('http://localhost:4444/relprod')
     .then((response) => response.json())
     .then((data) => {
       this.setState({
@@ -34,7 +34,7 @@ class App extends React.Component {
     }
     let that = this
     let id = this.state.lastId
-    fetch(`http://localhost:4357/relprod/next/${id}`)
+    fetch(`http://localhost:4444/relprod/next/${id}`)
     .then((response) => response.json())
     .then((data) => {
       this.setState({
@@ -52,7 +52,7 @@ class App extends React.Component {
     }
     let that = this
     let id = this.state.firstId - 6
-    fetch(`http://localhost:4357/relprod/prev/${id}`)
+    fetch(`http://localhost:4444/relprod/prev/${id}`)
     .then((response) => response.json())
     .then((data) => {
       this.setState({

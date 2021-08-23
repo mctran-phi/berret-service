@@ -5,7 +5,7 @@ const database = require('../database/database.js');
 const Products = database.Products
 
 const app = express();
-const port = 4357;
+const port = 4444;
 
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(express.json());
